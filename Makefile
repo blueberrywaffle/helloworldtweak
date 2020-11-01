@@ -14,3 +14,5 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 
 $(TWEAK_NAME)_FRAMEWORKS = AudioToolbox
 
+SUBPROJECTS += helloworldtweakpreferences
+include $(THEOS_MAKE_PATH)/aggregate.mk
