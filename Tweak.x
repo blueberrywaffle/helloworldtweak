@@ -6,6 +6,7 @@ static void loadPreferences() {
 	persistentDomainForName:@"com.blueberrywaffle.helloworldtweakpreferences"];
 
 	enabled = [preferences objectForKey:@"enabled"] ? [[preferences objectForKey:@"enabled"] boolValue] : YES;
+	vibrationSetting = [[preferences objectForKey:@"vibrationSetting"] integerValue];
 }
 
 %hook SBVolumeControl
@@ -15,7 +16,7 @@ static void loadPreferences() {
 	loadPreferences();
 
 	 if (enabled) {
-	 	AudioServicesPlaySystemSound(1521);
+	 	AudioServicesPlaySystemSound(vibrationSetting);
 	 	}
 	 }
 
@@ -24,7 +25,7 @@ static void loadPreferences() {
 	loadPreferences();
 
 	 if (enabled) {
-	 	AudioServicesPlaySystemSound(1521);
+	 	AudioServicesPlaySystemSound(vibrationSetting);
 	 	}
 	 }
 
