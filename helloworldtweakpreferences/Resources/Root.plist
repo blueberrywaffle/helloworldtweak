@@ -28,7 +28,7 @@
             <key>detail</key>
 			<string>PSListItemsController</string>
             <key>default</key>
-			<string>1</string>
+			<integer>1519</integer>
             <key>defaults</key>
             <string>com.blueberrywaffle.helloworldtweakpreferences</string>
             <key>key</key>
@@ -37,15 +37,15 @@
             <string>Vibration Setting</string>
             <key>validTitles</key>
             <array>
-                <string>Low</string>
-                <string>Meduim</string>
-                <string>High</string>
+                <string>Peek</string>
+                <string>Pop</string>
+                <string>Triple Pulse</string>
             </array>
-            <key>validValues</string>
+            <key>validValues</key>
             <array>
-                <string>0</string>
-                <string>1</string>
-                <string>2</string>
+                <integer>1519</integer>
+                <integer>1520</integer>
+                <integer>1521</integer>
             </array>
         </dict>
 	</array>

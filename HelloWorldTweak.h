@@ -1,1 +1,2 @@
 BOOL enabled;
+NSInteger vibrationSetting;
