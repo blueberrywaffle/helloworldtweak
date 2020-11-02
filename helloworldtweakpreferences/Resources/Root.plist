@@ -22,6 +22,32 @@
 			<key>label</key>
 			<string>Enabled</string>
 		</dict>
+        <dict>
+            <key>cell</key>
+            <string>PSLinkListCell</string>
+            <key>detail</key>
+			<string>PSListItemsController</string>
+            <key>default</key>
+			<string>1</string>
+            <key>defaults</key>
+            <string>com.blueberrywaffle.helloworldtweakpreferences</string>
+            <key>key</key>
+            <string>vibrationSetting</string>
+            <key>label</key>
+            <string>Vibration Setting</string>
+            <key>validTitles</key>
+            <array>
+                <string>Low</string>
+                <string>Meduim</string>
+                <string>High</string>
+            </array>
+            <key>validValues</string>
+            <array>
+                <string>0</string>
+                <string>1</string>
+                <string>2</string>
+            </array>
+        </dict>
 	</array>
 	<key>title</key>
 	<string>HelloWorldTweakPreferences</string>
