@@ -9,24 +9,29 @@ static void loadPreferences() {
 	vibrationSetting = [[preferences objectForKey:@"vibrationSetting"] integerValue];
 }
 
-%hook SBVolumeControl
+%group HelloWorldTweak
 
--(void)increaseVolume {
-	 %orig;
-	loadPreferences();
 
-	 if (enabled) {
-	 	AudioServicesPlaySystemSound(vibrationSetting);
-	 	}
-	 }
+	%hook SBVolumeControl
 
--(void)decreaseVolume {
-	 %orig;
-	loadPreferences();
+	-(void)increaseVolume {
+		%orig;
+		AudioServicesPlaySystemSound(vibrationSetting);
+	}
 
-	 if (enabled) {
-	 	AudioServicesPlaySystemSound(vibrationSetting);
-	 	}
-	 }
+	-(void)decreaseVolume {
+		%orig;
+		AudioServicesPlaySystemSound(vibrationSetting);
+	}
+
+	%end
 
 %end
+
+%ctor {
+	loadPreferences();
+
+	if(enabled) {
+		%init(HelloWorldTweak)
+	}
+}
